@@ -23,7 +23,7 @@ router.get('/:id', function(req, res, next) {
     if (err) { res.sendStatus(500); console.error(err); return; };
     
     if(rowsSelect.length > 0) {
-      res.json(rowsSelect[0]);
+      res.json(rowsSelect);
     }else {
       res.sendStatus(404);
     }
