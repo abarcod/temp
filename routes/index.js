@@ -43,7 +43,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* POST update temp. */
+/* PUT update temp. */
 router.put('/:id', function(req, res, next) {
   connection.query(`UPDATE temp SET ? WHERE temp.id = ?`, [req.body, req.params.id], function(err, rowsUpdate, fields) {
     if (err) { res.sendStatus(500); console.error(err); return; };
